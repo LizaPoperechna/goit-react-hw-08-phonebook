@@ -1,4 +1,4 @@
-import { H1, H2 } from "./contactView.styled";
+import { H1, H2, Container } from "./contactView.styled";
 import { getIsLoading, getError } from "redux/Contacts/selectors";
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -7,6 +7,7 @@ import { ContactList } from "components/ContactList/ContactList";
 import { Filter } from "components/Filter/Filter";
 import { fetchContacts } from "redux/Contacts/operations";
 import { Helmet } from 'react-helmet';
+
 
 
 export default function ContactsView() {
@@ -18,7 +19,7 @@ export default function ContactsView() {
  useEffect(() => {dispatch(fetchContacts())}, [dispatch]);
 
  return (
-        <>
+        <Container>
             <Helmet>
                 <title>Your phonebook</title>
             </Helmet>
@@ -29,8 +30,7 @@ export default function ContactsView() {
                 <H2>Contacts</H2>
                 <Filter />
                 <ContactList />
-                
             </div>
-        </>
+        </Container>
  ) 
 }

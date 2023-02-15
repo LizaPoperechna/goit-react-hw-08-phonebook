@@ -1,8 +1,22 @@
 import styled from '@emotion/styled';
 
-export const Header = styled.header`
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    borderBottom: '1px solid #2A363B',
+export const Container = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 900px;
 `
+
+export const Header = styled.header`
+  width: 900px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 0;
+  margin-bottom: 16px;
+  border-bottom: 1px solid black;
+  > nav {
+    display: flex;
+  }
+`;

@@ -1,12 +1,12 @@
 import React from 'react';
-import { Link } from './Navigation.styled';
+import { Link, Nav } from './Navigation.styled';
 import { useAuth } from 'hooks/useAuth';
 
 export const Navigation = () => {
   const { isLoggedIn } = useAuth();
 
   return (
-    <nav>
+    <Nav>
       <Link to="/">
         Home
       </Link>
@@ -15,6 +15,6 @@ export const Navigation = () => {
           Contacts
         </Link>
       )}
-    </nav>
+    </Nav>
   );
 };

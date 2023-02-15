@@ -1,7 +1,7 @@
 import { Navigation } from 'components/Navigation/Navigation';
 import { UserMenu } from 'components/UserMenu/UserMenu';
 import { AuthNav } from 'components/AuthNav/AuthNav';
-import { Header } from './AppBar.styled';
+import { Header, Container } from './AppBar.styled';
 import { useAuth } from 'hooks/useAuth';
 
 
@@ -11,8 +11,10 @@ const { isLoggedIn } = useAuth();
   
   return (
     <Header>
-      <Navigation />
-      {isLoggedIn ? <UserMenu /> : <AuthNav />}
+        <Container>
+            <Navigation />
+            <div>{isLoggedIn ? <UserMenu /> : <AuthNav />}</div>
+        </Container>
     </Header>
   );
 }

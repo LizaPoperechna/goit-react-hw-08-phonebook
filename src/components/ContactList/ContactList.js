@@ -1,5 +1,5 @@
 import { ContactItem } from 'components/ContactItem/ContactItem';
-import { List, P } from './ContactList.styled';
+import { List, P, Container } from './ContactList.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteContact } from 'redux/Contacts/operations';
 import { getContacts, getFilter } from 'redux/Contacts/selectors';
@@ -28,7 +28,7 @@ export const ContactList = () => {
     
 
     return (
-        <>
+        <Container>
             {filteredContacts.length <= 0 
             ? (<P>No contacts in Phonebook</P>) 
             : (<List>
@@ -44,7 +44,7 @@ export const ContactList = () => {
                         );
                     })}
                 </List>)}
-        </>
+        </Container>
     )
 }
 

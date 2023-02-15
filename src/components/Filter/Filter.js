@@ -3,6 +3,7 @@ import { Card } from './Filter.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { getFilter } from 'redux/Contacts/selectors';
 import { setFilter } from 'redux/Contacts/filterSlice';
+import { Input, Label } from 'components/ContactForm/ContactForm.styled';
 
 
 export const Filter = () => {
@@ -12,8 +13,8 @@ export const Filter = () => {
 
     return (
         <Card>
-            <label htmlFor="filter">Find contacts by name</label>
-            <input
+            <Label htmlFor="filter">Find contacts by name</Label>
+            <Input
                 type="text"
                 value={filter}
                 onChange={(e) => {
